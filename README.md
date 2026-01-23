@@ -49,8 +49,8 @@ cd wordpress-compose
    docker compose up -d
    ```
    This will start:
-	•	WordPress
-	•	MariaDB
+   - WordPress
+   - MariaDB
 
 4. Open WordPress in your browser
 ```bash
