@@ -52,7 +52,7 @@ cd wordpress-compose
 
 4. Open WordPress in your browser
 ```bash
-http://<your_ip:8080
+http://<your_ip>:8080
 ```
 Login credentials are defined in your .env file.
 
@@ -67,7 +67,7 @@ docker compose down -v
 ```
 
 
-##Configuration
+## Configuration
 
 Configuration is handled via a .env file.
 ```bash
@@ -93,7 +93,7 @@ docker compose down
 ```
 
 
-##Persistence
+## Persistence
 
 Data is persisted using Docker volumes:
 	•	MariaDB: database data is retained
@@ -115,7 +115,7 @@ docker compose logs -f db
 ```
 
 
-##Reset Everything
+## Reset Everything
 
 Warning: This will remove ALL data (database & uploads)
 ```bash
@@ -123,7 +123,7 @@ docker compose down -v
 ```
 
 
-##Security Notes
+## Security Notes
 - No secrets are stored in the repository
 -	Credentials are defined only in .env
 -	.env is excluded via .gitignore
@@ -133,15 +133,15 @@ docker compose down -v
 -	Do not expose ports publicly
 
 
-##Testing Checklist
--	docker compose up -d runs without errors
--	WordPress is reachable at http://localhost:<PORT>
+## Testing Checklist
+-	`docker compose up -d` runs without errors
+-	WordPress is reachable at http://<your_ip>:<PORT>
 -	Login works using .env credentials
 -	Restart keeps data intact
--	docker compose down -v fully resets the environment
+-	`docker compose down -v` fully resets the environment
 
 
-##Troubleshooting
+## Troubleshooting
 
 Port already in use
 ```bash
@@ -152,14 +152,14 @@ ERROR: bind: address already in use
 Database startup delay
 → MariaDB may take a few seconds; WordPress will retry automatically.
 
-Broken setup
+Broken setup 
 ```bash
 docker compose down -v
 docker compose up -d
 ```
 
 
-##Quickstart Note (Recommended)
+## Quickstart Note (Recommended)
 
 The Quickstart section should begin with:
 ```bash
